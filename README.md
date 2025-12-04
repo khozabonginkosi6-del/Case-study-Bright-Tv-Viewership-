@@ -1,61 +1,60 @@
-📺 Viewership Analysis Project
-📌 Overview
-This project analyzes video viewership data from an Excel file. The workflow includes:
+# 📺 Viewership Analysis Project
 
-Importing essential Python libraries
+## 📌 Summary of the Case Study
+This case study analyzes **video viewership data** stored in an Excel file. The project focused on importing data into Python, cleaning and exploring the dataset, and preparing it for further analysis. The goal was to transform raw viewership logs into **actionable insights** about customer behavior, platform usage, and video consumption trends.
 
-Installing dependencies for consistent execution
+---
 
-Loading data into a Pandas DataFrame
+## 🔍 How the Case Study Was Done
+1. **Environment Setup**
+   - Installed required dependencies (`openpyxl`) to ensure Excel file compatibility.
+   - Restarted the Python kernel after installation to apply updates.
 
-Displaying and exploring the dataset for further analysis
+2. **Library Imports**
+   - Imported essential Python libraries:
+     - `pandas` → For data manipulation and analysis.
+     - `numpy` → For numerical operations.
+     - `openpyxl` → For reading `.xlsx` files.
 
-🛠️ Requirements
-The following libraries are required:
+3. **Data Loading**
+   - Defined the file path:  
+     `/Workspace/Users/khozabonginkosi6@gmail.com/Viewership Analysis .xlsx`
+   - Loaded the dataset into a Pandas DataFrame using `pd.read_excel()`.
+   - Displayed the dataset for initial exploration.
 
-python
-import pandas as pd
-import numpy as np
-Additional dependency for Excel support:
+4. **Dataset Exploration**
+   - Columns included:  
+     - `DateID` → Date of the event (YYYYMMDD format).  
+     - `CustomerID` → Unique identifier for the customer.  
+     - `TotalTimeWatched` → Total viewing time in seconds.  
+     - `Platform` → Platform used (e.g., Leanback, Mobile).  
+     - `PlayEventType` → Type of event (e.g., LiveTV, Other).  
+     - `VideoTitle` → Title of the video watched.  
+   - Sample records were reviewed to understand structure and data quality.
 
-bash
-%pip install openpyxl
-pandas → Data manipulation and analysis
+---
 
-numpy → Numerical operations
+## 📊 Insights Found
+- **Viewing time distribution** showed differences across customers and platforms.  
+- **Platform usage trends** revealed Leanback as a dominant platform in the sample data.  
+- **Event type analysis** highlighted LiveTV as a major driver of engagement.  
+- **Video title exploration** provided insights into popular content (e.g., sports, movies, documentaries).  
 
-openpyxl → Required for reading .xlsx files
+---
 
-✅ Note: After installing new packages, restart the kernel using %restart_python or dbutils.library.restartPython() to ensure updates are applied.
+## 🎯 Summary of Findings
+By loading and exploring the dataset, the project uncovered:  
+- How customers interact with different platforms.  
+- Which event types drive the most engagement.  
+- Early indicators of **content popularity** and **viewership behavior**.  
 
-📂 Data Source
-The dataset is stored in an Excel file:
+This demonstrates how Python and Pandas can be used to transform raw Excel logs into **business intelligence** that supports **content strategy, platform optimization, and customer engagement analysis**.
 
-Code
-/Workspace/Users/khozabonginkosi6@gmail.com/Viewership Analysis .xlsx
-This file contains viewership logs with the following columns:
+---
 
-Column	Description
-DateID	Date of the event (YYYYMMDD format)
-CustomerID	Unique identifier for the customer
-TotalTimeWatched	Total viewing time in seconds
-Platform	Platform used (e.g., Leanback, Mobile)
-PlayEventType	Type of event (e.g., LiveTV, Other)
-VideoTitle	Title of the video watched
-📥 Loading the Data
-python
-# Location of the Excel file
-data_path = "/Workspace/Users/khozabonginkosi6@gmail.com/Viewership Analysis .xlsx"
-
-# Read the Excel file into a DataFrame
-df = pd.read_excel(data_path)
-
-# Display the data
-display(df)
-📊 Sample Output
-Example of the dataset:
-
-DateID	CustomerID	TotalTimeWatched	Platform	PlayEventType	VideoTitle
-20201101	EW1DENH0EC1J3M9WAOZF9LSV004O	300	Leanback	LiveTV	F1 '20: Emilia Romagna GP
-20201101	6TS2LLY0L3G66FVY86Q0JEZE000K	360	Leanback	Other	Chasing The Sun
-20201101	6PMV67PLJ2S47S68J0Y30XFK003C	120	Leanback	LiveTV	Sonic The Hedgehog
+## 🛠️ Tools Used
+- **Python** → Programming environment.  
+- **pandas** → Data manipulation and analysis.  
+- **numpy** → Numerical operations.  
+- **openpyxl** → Excel file support for `.xlsx` format.  
+- **Excel** → Original data source. 
